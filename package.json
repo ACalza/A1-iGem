@@ -1,0 +1,19 @@
+{
+  "name": "igema1",
+  "version": "1.0.0",
+  "description": "An Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "colors": "^1.1.0",
+    "express": "^4.12.4",
+    "http": "0.0.0",
+    "mongoose": "^4.0.4",
+    "morgan": "^1.5.3"
+  }
+}

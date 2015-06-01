@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>iGem A1</title>
+	    <!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+		<script type="text/javascript" src="angular.min.js"></script>
+		<!-- endbower -->
+		
+	</head>
+	<body ng-controller="bodyCtrl">
+	    <!-- bower:js -->
+		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/fastclick/lib/fastclick.js"></script>
+		<script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+		<script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+		<script src="bower_components/foundation/js/foundation.js"></script>
+		<script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
+		<!-- endbower -->
+		<script src="controller/app.js"></script>
+		<center>
+			<form>
+				<textarea ng-model="dna" rows="30" cols="100">
+				</textarea>
+				<button ng-click="genAA()" type="button">Convert to AA</button>
+				<button ng-click="getAll()" type="button">All results</button>
+			</form>
+			
+			    <b>You just generated:</b> {{currentSeq}}
+		
+			<br>
+			<div ng-repeat = "seq in seqs">
+				<p><b>DNA: </b> <br>
+					{{seq.DNA}}
+					<b>Corresponding RNAs split into spaces: </b><br>
+					{{seq.RNA}}
+				<br>
+				<br>
+			</div>
+		</center>
+	</body>
+</html>
